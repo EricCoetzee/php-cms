@@ -1,0 +1,16 @@
+RewriteEngine on
+
+RewriteRule ^(index|profile|authors|maps|terms|forgot|users|post|post_comments|stories|category|categories|contact|comments|posts|search)$ $1.php [NC,L]
+
+RewriteRule ^post/(\d+)$ post.php?p_id=$1 [NC,L]
+
+RewriteRule ^category/(\d+)$ category.php?category=$1 [NC,L]
+
+
+
+
+
+
+ 
+
+

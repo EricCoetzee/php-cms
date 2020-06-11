@@ -1,0 +1,48 @@
+/* Form Sign in button */
+.form-inline button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius:8px;
+  }
+  
+  .form-inline button:hover {
+    background-color: royalblue;
+    outline: none;
+  }
+
+/* Sign Up Buttons */
+.sign-up-btn{
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+    border-radius:8px;
+  }
+  
+  .sign-up-btn:hover {
+    background-color: royalblue;
+  }
+
+  /* Set a style for the submit button */
+  .registerbtn {
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius:8px;
+  }
+  
+  .registerbtn:hover {
+    background-color: royalblue;
+  }
+  

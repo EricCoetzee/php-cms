@@ -1,0 +1,22 @@
+@media only screen and (max-width: 800px) {
+    .header-left { grid-area: header-left; 
+    display: flex;
+    justify-content: center;
+    }
+    .header-right { grid-area: header-right;
+      display: flex;
+      justify-content: center;
+    }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header-left header-left header-left header-left header-left header-left'
+      ' header-right header-right header-right header-right header-right header-right' 
+      'sectionone sectionone sectionone sectionone sectionone sectionone'
+    'footer footer footer footer footer footer';
+    padding: 10px;
+  }
+    
+    
+  }

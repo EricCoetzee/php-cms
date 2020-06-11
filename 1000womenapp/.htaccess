@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteRule ^(index|privacy-policy|terms|forgot|reset)$ $1.php [NC,L]
+
+
+
+
+
+
+ 
+
+

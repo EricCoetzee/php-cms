@@ -1,0 +1,22 @@
+{
+    "name": "eric/1000womenapp",
+    "require": {
+        "phpmailer/phpmailer": "^6.1"
+    },
+
+    "autoload": {
+        "classmap": [
+            
+            "classes"
+        ]
+    },
+
+    "authors": [
+        {
+            "name": "Eric Coetzee",
+            "email": "eric@ezeemax.net"
+        }
+    ]
+
+
+}

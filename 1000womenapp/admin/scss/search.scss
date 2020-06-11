@@ -1,0 +1,404 @@
+:root {
+  --main: #a388b5; 
+  --top-button: #582678;
+  --background: #f1f1f1 ;
+  --white-font: #f1f1f1 ;
+  --btn-color: #00cece;
+  --search-background: #ffc600;
+  --font:#414142 ;
+   background-color: var(--main);
+  }
+
+*{
+box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/comfortaa-v28-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../../fonts/fonts/comfortaa-v28-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/comfortaa-v28-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/comfortaa-v28-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/comfortaa-v28-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/comfortaa-v28-latin-regular.svg#Comfortaa') format('svg'); /* Legacy iOS */
+}
+
+body {
+background-color: var(--background);
+margin: 0;
+padding: 0;
+}
+
+/* Side Navigation Menu */
+
+.sidenav {
+height: 85.5vh;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: var(--main);
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.sidenav a, .dropdown-btn, .dropdown-btn-two{
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: var(--white-font);
+background-color: transparent;
+cursor: pointer;
+border: none;
+display: block;
+background: none;
+outline:none;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: var(--top-button);
+opacity: 0.8;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+.dropdown-container {
+display: none;
+background-color: var(--main);
+color: var(--white-font);
+}
+.dropdown-btn {
+text-decoration: none;
+font-size: 20px;
+color: var(--white-font);
+display: block;
+border: none;
+background: none;
+width: 100%;
+text-align: left;
+cursor: pointer;
+outline: none;
+}
+.dropdown-btn > .i{
+border: none;
+}
+.dropdown-btn:hover{
+color: var(--top-button);
+background-color: var(--main);
+}   
+.dropdown-btn:focus{
+color: var(--top-button);
+background-color: var(--main);
+}
+.active {
+background-color: var(--main);
+color: var(--white-font);
+border: none;
+outline:none;
+}
+.fa-caret-down {
+float: right;
+padding-right: 8px;
+margin-right: 50px;
+}
+
+#noCarot{
+display: none;
+}
+
+
+
+.top{
+    color:var(--top-button);
+    margin-top: 10px;
+  }
+  .top:hover{
+    opacity: .5;
+    transition: .3s ease-in;
+  }
+  
+  .top span::selection {
+    color: none;
+    background: none;
+  }
+  
+
+
+
+/* Menu Button Section */
+.dash-menu{ grid-area: dashNav;
+display: flex;
+justify-content: flex-start;
+background-color: var(--main);
+
+    i{
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+}
+
+/* Top Search Section */
+.search{ grid-area: looking;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--main);
+  }
+  .user{ grid-area: profi;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--main);
+  
+    i{
+      margin-right: 10px;
+    }
+  }
+
+
+
+
+/* Main Container grid-container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'dashNav looking looking looking looking profi';
+     background-color: var(--main);
+  }
+
+  .grid-container > div {
+    padding: 20px 0;
+    font-size: 15px;
+  }
+
+
+
+
+  /* Top Search Styling  */
+  .search-form .search-box:focus {
+    background-color: var(--background);
+    outline: none;
+  }
+  .search-form{
+    width: 100%;
+  }
+   .search-form .search-box {
+    width: 80%;
+    display: inline-block;
+    padding: 10px;
+    border: none;
+    background: var(--search-background);
+  }
+  .search-form .search-box::after{
+      content: ' \0020';
+      margin-right: 10px;
+  }
+  .search-btn{
+    padding: 3px;
+    border: none;
+    background-color: var(--main);
+    cursor: pointer;  
+}
+
+
+
+
+/* Top user and dropdown styling */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 30%;
+    top:  155%;
+    background-color: var(--background);
+    min-width: 160px;
+    overflow: visible;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+  }
+  
+  .dropdown-content a {
+    color: var(--top-button); 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+  }
+  
+  .dropdown a:hover {background-color: snow;}
+  
+  .show {display: block;}
+  
+  .dropdown .dropdown-content::before{
+    content: ' \25B2';
+    position: absolute;
+    top: -11%;
+    left: 90%;
+    margin-left: -5px;
+    border-width: 5px;
+    color: var(--white-font);
+  }
+  
+    .search-results{
+      display: grid;
+      height: 81vh;
+      overflow:auto;
+      margin: 10px;
+  
+      .no-results{
+        
+          color: var(--top-button);
+      }
+      
+  }   
+  /* Forum reading section styling */
+  .forum-section-container{
+    margin-bottom: 20px;
+    
+    }
+    .forum-title{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+    }
+    .forum-title-link{
+    text-decoration: none;
+    color: #fff !important;
+    text-shadow: 2px 2px var(--main);
+    }
+    
+    .forum-title-link:hover{
+    text-decoration: underline;
+    transition: .5s ease-in-out;
+    }
+    .forum-author{
+    padding: 10px;
+    font-size: larger;
+    }
+    .forum-author-link{
+    text-decoration: none;
+    color: var(--search-background);
+    }
+    .forum-author-link:hover{
+    text-decoration: underline;
+    }
+    .forum-date-link{
+    text-decoration: none;
+    color: var(--font);
+    cursor: text;
+    }
+    .forum-date-link:hover{
+    text-decoration: underline;
+    }
+    
+    .line-rule{
+    margin-bottom: 20px;
+    border: 1px dotted var(--top-button);
+    }
+    .forum-image{
+    width: 100%;
+    max-width: 500px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    }
+    .forum-content{
+    font-family: "Comfortaa";
+    font-weight: 400;
+    text-transform: none;
+    font-size: 15px;
+    margin: 20px 0;
+    text-align: justify;
+    }
+
+    .read-more-btn{
+      outline: none;
+      background-color: transparent;
+      color: var(--top-button);
+      margin: 10px;
+      border: none;
+      font-weight: 600;
+      padding: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+  }
+  .read-more-btn:hover{
+      text-decoration: underline;
+  }
+  
+  
+     /* Footer Section */
+     .forum-footer { 
+      grid-area: forFoot; 
+    background-color: var(--main); 
+      height: 50px;
+      margin-top: 10px;
+      color: snow;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+  }
+  
+  .footer{
+    display: grid;
+    grid-template-areas:
+      'forFoot forFoot forFoot forFoot forFoot forFoot'; 
+  }
+  .foot{
+    margin-top: 15px; 
+  }
+  @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  }
+  @media screen and (max-width: 800px) {
+  
+      .grid-container {
+          grid-template-areas:
+            'dashNav looking looking looking looking profi' ;
+        }
+  
+        .hide{
+          display: none;
+        }
+        .search{ 
+          display: flex;
+          justify-content: flex-start;
+        }
+  
+  }
+  @media screen and (max-height: 1400px) {
+    .sidenav a {font-size: 18px;}
+    .sidenav{top: 7.66%}
+    }
+    @media screen and (max-height: 850px) {
+    .sidenav a {font-size: 18px;}
+    .sidenav{top: 10.5%}
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+    }
+    @media screen and (max-height: 500px) {
+    .sidenav a {font-size: 18px;}
+    .sidenav{top: 19%}
+    
+    }

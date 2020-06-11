@@ -1,0 +1,60 @@
+:root {
+  --main: #a388b5; 
+  --top-button: #582678;
+  --background: #f1f1f1 ;
+  --white-font: #f1f1f1 ;
+  --btn-color: #00cece;
+  --search-background: #ffc600;
+  --font:#414142 ;
+  
+}
+.header-left { grid-area: header-left; 
+  
+    h2{
+      font-size: 22px;
+      font-weight: 300;
+      color: #fed189;
+      float: left;
+      margin-top: 15px;
+      text-transform: uppercase;
+      span{
+        color: #00a0df !important;
+      }
+    }
+}
+.header-right { grid-area: header-right; 
+
+}
+
+.section-one{
+    grid-area: sectionone;
+}
+.iframe{
+  float: right;
+}
+.section-two{
+    grid-area: sectiontwo;
+}
+.footer{
+    grid-area: footer;
+    background-color: var(--main);
+    height: 50px;
+    margin-top: 10px;
+    color: snow;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header-left header-left header-right header-right header-right header-right'
+    'sectionone sectionone sectionone sectionone sectiontwo sectiontwo'
+    'footer footer footer footer footer footer'
+    ;   
+    
+}
+
+.grid-container > div {
+  font-size: 15px;
+}

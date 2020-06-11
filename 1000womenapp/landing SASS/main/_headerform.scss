@@ -1,0 +1,59 @@
+.form-inline {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .forgot-account{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right:103px ;
+    
+    a{
+      text-decoration: none;
+    }
+  }
+  .forgot-account:hover{
+    text-decoration: underline;
+  }
+  
+  
+  .sign-up-btn{
+      display:none;
+      outline: none;
+  }
+  
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+  }
+  
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: none;
+  }
+  .form-inline input:focus{
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  @media (max-width: 800px) {
+    .form-inline input {
+      display:none;
+    }
+    .forgot-account{
+      display:none;
+    }
+    
+    .form-inline {
+      display:none;
+    }
+   .sign-up-btn{
+    display: inline;
+   }
+    
+  }
