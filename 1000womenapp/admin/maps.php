@@ -1,4 +1,4 @@
-<!-- AIzaSyCIfLVwyCJQ3lqpm6txqs1ch0afW6XDFTQ -->
+
 <?php ob_start();?>
 <?php session_start() ?>
 <?php 
@@ -202,7 +202,7 @@ if(($_SESSION['user_role'] !== 'admin')){
       function doNothing() {}
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIfLVwyCJQ3lqpm6txqs1ch0afW6XDFTQ&callback=myMap">
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap">
     </script>
     
 <script>
